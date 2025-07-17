@@ -1,0 +1,70 @@
+.partners {
+  padding: 3rem 5%;
+  background-color: white;
+}
+
+.partners-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.partner-logo:hover {
+  opacity: 1;
+}
+
+.partner-icon {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.partner-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .partners {
+    padding: 2rem 5%;
+  }
+
+  .partners-grid {
+    gap: 2rem;
+  }
+
+  .partner-icon {
+    font-size: 2rem;
+  }
+
+  .partner-text {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-grid {
+    gap: 1.5rem;
+  }
+
+  .partner-icon {
+    font-size: 1.75rem;
+  }
+
+  .partner-text {
+    font-size: 1rem;
+  }
+} 
