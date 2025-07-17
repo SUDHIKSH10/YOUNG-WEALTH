@@ -13,6 +13,8 @@ export default defineConfig({
         chunkFileNames: 'assets/[name].js',
         assetFileNames: 'assets/[name].[ext]'
       }
-    }
+    },
+    // Copy 404.html to dist
+    copyPublicDir: true
   }
 })
