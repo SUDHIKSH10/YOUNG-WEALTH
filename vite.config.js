@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -7,13 +8,14 @@ export default defineConfig({
   base: '/young-wealth/',
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
+    emptyOutDir: true,
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[name].[ext]',
-        chunkFileNames: 'assets/[name].js',
-        entryFileNames: 'assets/[name].js',
-      },
-    },
-  },
+        manualChunks: undefined,
+        entryFileNames: `assets/[name].js`,
+        chunkFileNames: `assets/[name].js`,
+        assetFileNames: `assets/[name].[ext]`
+      }
+    }
+  }
 })
